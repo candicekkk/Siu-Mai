@@ -1,3 +1,8 @@
+        
+html, body {
+    touch-action: manipulation; /* Prevents double-tap zoom */
+}
+        
         body {
             margin: 0;
             display: flex;
