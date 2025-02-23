@@ -10,6 +10,19 @@ let gameOver = false;
 canvas.width = 400;
 canvas.height = 500;
 
+function resizeCanvas() {
+    const maxCanvasWidth = 600;  // Set a max width for larger screens
+    const maxCanvasHeight = 600; // Set a max height for larger screens
+
+    // Set canvas size to fit the screen but not exceed max size
+    canvas.width = Math.min(window.innerWidth * 0.9, maxCanvasWidth);
+    canvas.height = Math.min(window.innerHeight * 0.7, maxCanvasHeight);
+}
+
+// Call function on load and resize
+window.addEventListener("load", resizeCanvas);
+window.addEventListener("resize", resizeCanvas);
+
 const player = {
     x: 210,
     y: 450,
