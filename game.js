@@ -7,7 +7,7 @@ const controls = document.querySelector(".controls");
 let missedCount = 0;
 let gameOver = false;
 
-canvas.width = 500;
+canvas.width = 400;
 canvas.height = 500;
 
 const player = {
