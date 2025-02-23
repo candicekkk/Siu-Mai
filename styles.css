@@ -98,4 +98,10 @@
             padding: 10px;
             border-radius: 10px;
         }
-        
+
+        #startGameBtn {
+            user-select: none; /* Prevents text selection */
+            -webkit-user-select: none; /* For Safari */
+            -moz-user-select: none; /* For Firefox */
+            -ms-user-select: none; /* For Edge */
+        }

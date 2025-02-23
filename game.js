@@ -146,3 +146,13 @@ function endGame() {
     player.moveLeft = false;
     player.moveRight = false;
 }
+
+  // Prevent text selection via JavaScript (extra layer of security)
+  document.getElementById("startGameBtn").onmousedown = function(event) {
+    event.preventDefault(); // Prevents text selection on mouse down
+  };
+
+  // Prevent copying using keyboard shortcuts or right-click
+  document.getElementById("startGameBtn").oncopy = function(event) {
+    event.preventDefault();
+  };
