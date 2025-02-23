@@ -147,12 +147,15 @@ function endGame() {
     player.moveRight = false;
 }
 
-  // Prevent text selection via JavaScript (extra layer of security)
-  document.getElementById("startGameBtn").onmousedown = function(event) {
-    event.preventDefault(); // Prevents text selection on mouse down
-  };
+  // Select all buttons on the page
+  document.querySelectorAll("button").forEach(button => {
+    // Prevent text selection on mouse down
+    button.onmousedown = function(event) {
+      event.preventDefault();
+    };
 
-  // Prevent copying using keyboard shortcuts or right-click
-  document.getElementById("startGameBtn").oncopy = function(event) {
-    event.preventDefault();
-  };
+    // Prevent copying the button text
+    button.oncopy = function(event) {
+      event.preventDefault();
+    };
+  });

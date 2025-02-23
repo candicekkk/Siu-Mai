@@ -99,7 +99,7 @@
             border-radius: 10px;
         }
 
-        #startGameBtn {
+        button {
             user-select: none; /* Prevents text selection */
             -webkit-user-select: none; /* For Safari */
             -moz-user-select: none; /* For Firefox */
